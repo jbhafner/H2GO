@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>H2GO</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Kanit|Permanent+Marker" rel="stylesheet"> -->
+  </head>
+    <body>
+      <div class="fluid-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="jumbotron">
+                <hgroup>
+                  <h1>
+                    H<sub>2</sub>GO
+                  </h1>
+                </hgroup>
+            </div>
+            <div id="nav-div">
+              <nav>
+                <ul class="nav nav-pills">
+                 
+                  <li class="nav-item" id="loggedInAs"> 
+                  </li>
+                  <button id="nbBtnLogin" type="button" class="nav-item btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <span class="glyphicon glyphicon-log-in" my-2 my-sm-0></span> Login
+                  </button> <!-- Login Button -->
+                  <button id="nbBtnSignUp" type="button" class="nav-item btn btn-outline-success my-2 my-sm-0" type="submit">
+                      <span class="glyphicon glyphicon-collapse-up" my-2 my-sm-0></span> Sign-up
+                  </button>   <!-- Sign Up Button -->                 
+                  <button id="nbBtnLogout" type="button" class="btn btn-outline-success my-2 my-sm-0 hide">
+                    <span class="glyphicon glyphicon-log-out" my-2 my-sm-0></span> Logout
+                  </button>    <!-- Logout  Button -->
+
+                  <form id="search-form" class="form-inline my-2 my-lg-0">
+                  <input id="searchval" class="form-control mr-sm-2" type="text" placeholder="Search">
+                  <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="mapContainer">
+        <div id="map"></div>
+      </div>
+      <!-- Login Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+              <input class="input" id="txtEmail" type="email" placeholder="Email">
+              <input class="input" id="txtPassword" type="password" placeholder="Password">
+              <div class="buttons">
+                <button id="btnLogin" class="btn btn-secondary">Log In</button>
+              </div>
+          </div>
+      </div>
+      <!-- Signup Modal -->
+      <div id="signUpModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+              <input class="input" id="txtEmail2" type="email" placeholder="Email">
+              <input class="input" id="txtPassword2" type="password" placeholder="Password">
+              <input class="input" id="txtDispName" type="name" placeholder="Display Name">
+              <div class="buttons">
+                <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+                </div>
+          </div>
+      </div>      
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted">H<sub>2</sub>GO by T2B</span>
+        </div>
+      </footer>
+      
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript" src="assets/javascript/firebasemap.js"></script>
+       <script type="text/javascript" src="assets/javascript/auth.js"></script>
+       <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK4sY4dvK65ceACdFRZ4J5wt34qSItY6E
+            &libraries=visualization&callback=initMap">
+        </script>
+
+    </body>
+  </html>
